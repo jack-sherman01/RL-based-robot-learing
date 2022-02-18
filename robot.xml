@@ -1,0 +1,105 @@
+<mujoco>
+    <body mocap="true" name="robot0:mocap" pos="0 0 0">
+		<geom conaffinity="0" contype="0" pos="0 0 0" rgba="0 0.5 0 0.7" size="0.005 0.005 0.005" type="box"></geom>
+		<geom conaffinity="0" contype="0" pos="0 0 0" rgba="0 0.5 0 0.1" size="1 0.005 0.005" type="box"></geom>
+		<geom conaffinity="0" contype="0" pos="0 0 0" rgba="0 0.5 0 0.1" size="0.005 1 0.001" type="box"></geom>
+		<geom conaffinity="0" contype="0" pos="0 0 0" rgba="0 0.5 0 0.1" size="0.005 0.005 1" type="box"></geom>
+	</body>
+					
+    <body childclass="robot0:fetch" name="robot0:base_link" pos="0.2869 0.2641 0">
+		<joint armature="0.0001" axis="1 0 0" damping="1e+11" name="robot0:slide0" pos="0 0 0" type="slide"></joint>
+		<joint armature="0.0001" axis="0 1 0" damping="1e+11" name="robot0:slide1" pos="0 0 0" type="slide"></joint>
+		<joint armature="0.0001" axis="0 0 1" damping="1e+11" name="robot0:slide2" pos="0 0 0" type="slide"></joint>
+		<inertial diaginertia="1.2869 1.2236 0.9868" mass="70.1294" pos="-0.0036 0 0.0014" quat="0.7605 -0.0133 -0.0061 0.6491"></inertial>
+		<!-- <geom mesh="robot0:base_link" name="robot0:base_link" material="robot0:base_mat" class="robot0:grey"></geom>									 -->
+		<geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.4 0.4 0.4 1" mesh="crrc_zero" />
+        <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0 0 0 1" mesh="crrc0-1logo" />
+        <body name="crrc_link_1" pos="0 0 0.12">
+            <inertial pos="0 -0.03 0.12" mass="4" diaginertia="0.1 0.09 0.02" />
+            <joint name="crrc_joint_1" pos="0 0 0" axis="0 0 1" limited="true" range="-2.96706 2.96706" damping="0.5" />
+            <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="crrc1" />
+            <body name="crrc_link_2" pos="0 0 0.175" quat="0 0 0.707107 0.707107">
+                <inertial pos="0.0003 0.059 0.042" quat="0.707107 0.707107 0 0" mass="4" diaginertia="0.05 0.044 0.018" />
+                <joint name="crrc_joint_2" pos="0 0 0" axis="0 0 1" limited="true" range="-2.0944 2.0944" damping="0.5" />
+                <geom quat="0 0 1 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="crrc2" />
+                <body name="crrc_link_3" pos="0 0.215 0" quat="0 0 0.707107 0.707107">
+                    <inertial pos="0 0.03 0.13" mass="3" diaginertia="0.08 0.075 0.01" />
+                    <joint name="crrc_joint_3" pos="0 0 0" axis="0 0 1" limited="true" range="-2.96706 2.96706" damping="0.5" />
+                    <geom pos="0 0.0059 0" quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="crrc3" />
+                    <body name="crrc_link_4" pos="0 0 0.215" quat="0.707107 0.707107 0 0">
+                        <inertial pos="0 0.067 0.034" quat="0.707107 0.707107 0 0" mass="2.7" diaginertia="0.03 0.029 0.01" />
+                        <joint name="crrc_joint_4" pos="0 0 0" axis="0 0 1" limited="true" range="-2.0944 2.0944" damping="0.5" />
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="crrc4" />
+                        <body name="crrc_link_5" pos="0 0.155 0" quat="0 0 0.707107 0.707107">
+                            <inertial pos="0.0001 0.021 0.076" mass="1.7" diaginertia="0.02 0.018 0.005" />
+                            <joint name="crrc_joint_5" pos="0 0 0" axis="0 0 1" limited="true" range="-2.96706 2.96706" damping="0.5" />
+                            <geom pos="0 -0.0059 0" quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="crrc5" />
+                            <body name="crrc_link_6" pos="0 0 0.15" quat="0.707107 0.707107 0 0">
+                                <inertial pos="0 0.0006 0.0004" quat="0.707107 0.707107 0 0" mass="1.8" diaginertia="0.005 0.0047 0.0036" />
+                                <joint name="crrc_joint_6" pos="0 0 0" axis="0 0 1" limited="true" range="-2.0944 2.0944" damping="0.5" />
+                                <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="crrc6" />
+                                <body name="crrc_link_7" pos="0 0.135 0" quat="0 0 0.707107 0.707107">
+                                    <inertial pos="0 0 0.02" mass="0.3" diaginertia="0.001 0.001 0.001" />
+                                    <joint name="crrc_joint_7" pos="0 0 0" axis="0 0 1" limited="true" range="-3.05433 3.05433" damping="0.5" />
+                                    <geom pos="0 -0.0059 0" quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.4 0.4 0.4 1" mesh="crrc7" />
+                                    
+                                    <body euler="0 0 0" name="robot0:gripper_link" pos="0.1664 0 0"> 
+	    								<inertial diaginertia="0.0024 0.0019 0.0013" mass="1.5175" pos="-0.09 -0.0001 -0.0017" quat="0 0.7071 0 0.7071"></inertial>
+	    								<geom mesh="robot0:gripper_link" name="robot0:gripper_link" material="robot0:gripper_mat"></geom>
+	    								<body name="robot0:gipper_camera_link" pos="0.055 0 0.0225">
+	    									<body name="robot0:gripper_camera_rgb_frame" pos="0 0.02 0">
+	    										<body name="robot0:gripper_camera_rgb_optical_frame" pos="0 0 0" quat="0.5 -0.5 0.5 -0.5">
+	    											<camera euler="3.1415 0 0" fovy="50" name="gripper_camera_rgb" pos="0 0 0"></camera>
+	    										</body>
+	    									</body>
+	    									<body name="robot0:gripper_camera_depth_frame" pos="0 0.045 0">
+	    										<body name="robot0:gripper_camera_depth_optical_frame" pos="0 0 0" quat="0.5 -0.5 0.5 -0.5"></body>
+	    									</body>
+	    								</body>
+
+										<body childclass="robot0:fetchGripper" name="robot0:r_gripper_finger_link" pos="0 0.0159 0">
+											<inertial diaginertia="0.1 0.1 0.1" mass="4" pos="-0.01 0 0"></inertial>
+											<joint axis="0 1 0" name="robot0:r_gripper_finger_joint" range="0 0.05"></joint>
+											<geom pos="0 -0.008 0" size="0.0385 0.007 0.0135" type="box" name="robot0:r_gripper_finger_link" material="robot0:gripper_finger_mat" condim="4" friction="1 0.05 0.01"></geom>
+										</body>
+										<body childclass="robot0:fetchGripper" name="robot0:l_gripper_finger_link" pos="0 -0.0159 0">
+											<inertial diaginertia="0.1 0.1 0.1" mass="4" pos="-0.01 0 0"></inertial>
+											<joint axis="0 -1 0" name="robot0:l_gripper_finger_joint" range="0 0.05"></joint>
+											<geom pos="0 0.008 0" size="0.0385 0.007 0.0135" type="box" name="robot0:l_gripper_finger_link" material="robot0:gripper_finger_mat" condim="4" friction="1 0.05 0.01"></geom>
+										</body>
+											<site name="robot0:grip" pos="0.02 0 0" rgba="0 0 0 0" size="0.02 0.02 0.02"></site>
+                                    </body>
+                                </body>
+							</body>
+                        </body>
+                    </body>
+                </body>
+                        <body name="crrc_link_4_5_logo" pos="0 0.155 0" quat="0 0 0.707107 0.707107">
+                            <inertial pos="0 0 0" mass="0.001" diaginertia="1e-06 1e-06 1e-06" />
+                            <joint name="crrc_joint_5_bak" pos="0 0 0" axis="0 0 1" limited="true" range="-2.96706 2.96706" damping="0.5" />
+                            <geom pos="0 -0.0059 0" quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0 0 0 1" mesh="crrc4-5logo" />
+                        </body>
+                    </body>
+                </body>
+                <body name="crrc_link_2_3_logo" pos="0 0.215 0" quat="0 0 0.707107 0.707107">
+                    <inertial pos="0 0 0" mass="0.001" diaginertia="1e-06 1e-06 1e-06" />
+                    <joint name="crrc_joint_3_bak" pos="0 0 0" axis="0 0 1" limited="true" range="-2.96706 2.96706" damping="0.5" />
+                    <geom pos="0 0.0059 0" quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0 0 0 1" mesh="crrc2-3logo" />
+                </body>
+            </body>
+       
+        <body name="robot0:estop_link" pos="-0.1246 0.2389 0.3113" quat="0.7071 0.7071 0 0">
+		    <inertial diaginertia="0 0 0" mass="0.002" pos="0.0024 -0.0033 0.0067" quat="0.3774 -0.1814 0.1375 0.8977"></inertial>
+		    <geom mesh="robot0:estop_link" rgba="0.8 0 0 1" name="robot0:estop_link"></geom>
+		</body>
+		<body name="robot0:laser_link" pos="0.235 0 0.2878" quat="0 1 0 0">
+			<inertial diaginertia="0 0 0" mass="0.0083" pos="-0.0306 0.0007 0.0552" quat="0.5878 0.5378 -0.4578 0.3945"></inertial>
+			<geom mesh="robot0:laser_link" rgba="0.7922 0.8196 0.9333 1" name="robot0:laser_link"></geom>
+			<camera euler="1.55 -1.55 3.14" fovy="25" name="lidar" pos="0 0 0.02"></camera>
+		</body>
+		
+		<body name="robot0:external_camera_body_0" pos="0 0 0">
+			<camera euler="0 0.75 1.57" fovy="43.3" name="external_camera_0" pos="1.3 0 1.2"></camera>
+		</body>
+    <!-- </body> -->
+</mujoco>
