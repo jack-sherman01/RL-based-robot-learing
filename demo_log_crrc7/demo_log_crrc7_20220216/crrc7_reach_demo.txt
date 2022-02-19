@@ -1,0 +1,23 @@
+(HER) zh@zh-Lenovo-ideapad-FLEX-5-1570:~/hindsight-experience-replay$ python demo.py --env-name=FetchReach-v1
+Creating window glfw
+the episode is: 0, is success: 1.0
+the episode is: 1, is success: 1.0
+the episode is: 2, is success: 1.0
+the episode is: 3, is success: 1.0
+the episode is: 4, is success: 1.0
+the episode is: 5, is success: 0.0
+the episode is: 6, is success: 1.0
+the episode is: 7, is success: 0.0
+the episode is: 8, is success: 1.0
+the episode is: 9, is success: 0.0
+the episode is: 10, is success: 1.0
+the episode is: 11, is success: 1.0
+the episode is: 12, is success: 0.0
+the episode is: 13, is success: 1.0
+the episode is: 14, is success: 1.0
+the episode is: 15, is success: 1.0
+the episode is: 16, is success: 1.0
+the episode is: 17, is success: 1.0
+the episode is: 18, is success: 1.0
+the episode is: 19, is success: 0.0
+
